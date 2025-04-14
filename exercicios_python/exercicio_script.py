@@ -13,8 +13,11 @@ def pedir_idade ():
         except ValueError:
             print("Por favor digite apenas Números")
         else:
-            print("Idade: ", idade)
-            break
+            if idade < 0:
+                print("Por favor, digite um número positivo")
+            else:
+                print("Idade: ", idade)
+                break
     return idade
 
 def pedir_escolha ():
@@ -56,13 +59,17 @@ def pedir_altura ():
     Returns:
         float: altura é decimal portanto utilizamos float
     """
+    altura = -1.0
     while True:
         try:
             altura = float(input("Digite aqui sua Altura: "))
         except ValueError:
             print("Por favor digite apenas Números")
         else:
-            break
+            if altura <= 0:
+                print("Por favor, digite apenas números acima de 0")
+            else:
+                break
     return altura
 
 def validar (nome, idade, altura):
@@ -114,5 +121,3 @@ while True:
         print("Idade: ", idade)
         print("Altura: ", altura)
         break
-
-"""todo: usuário está podendo entrar com idade e altura negativa, não esquecer de arrumar"""
