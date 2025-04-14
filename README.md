@@ -1,2 +1,2 @@
-# shellscript
-Introducao ao shell script
+# estudos_python
+Introducao a Python
